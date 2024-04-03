@@ -26,7 +26,6 @@ To clone and run this application, you'll need [PHP](https://www.php.net/).
 <br>
 
 ## Youtube Overview
-<br>
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YrYjXtZfyOs/0.jpg)](https://www.youtube.com/watch?v=YrYjXtZfyOs)
 
 ## Support
