@@ -1,11 +1,6 @@
-# Thần Số Học Numerology
-Simpliy web numerology 
-
 
 <h1 align="center">
   <br>
-
-    <br>
   Thần Số Học Numerology
   <br>
 </h1>
