@@ -1,2 +1,2 @@
-# Th-n_s-_h-c_numerade
+# Thần Số Học Numerology
 Simpliy web numerology 
