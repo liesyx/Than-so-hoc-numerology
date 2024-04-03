@@ -19,7 +19,7 @@
 * Save the result preview as PDF (inbox to buy)
 * Cross platform
   - php ready.
-  - docker ready
+  - docker (comming soon)
 ## How To Use
 
 To clone and run this application, you'll need [PHP](https://www.php.net/).
