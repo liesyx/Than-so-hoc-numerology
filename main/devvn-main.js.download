@@ -1,0 +1,69 @@
+(function ($) {
+    $(document).ready(function () {
+        //$('.product-info.summary .single_add_to_cart_button').html('<strong>Thêm vào giỏ</strong> <small>Cho vào giỏ để mua tiếp</small>');
+        if($('body span.added-to-cart').length > 0){
+            var e = $.magnificPopup.open ? 0 : 300;
+            e && $.magnificPopup.close(),
+                setTimeout(function () {
+                    if (matchMedia('only screen and (max-width: 849px)').matches) {
+                        $('body .header-cart-link.off-canvas-toggle').trigger('click');
+                    }
+                }, e);
+        }
+        function devvnNumberlogictis(){
+            //devvn_box_numberlogictis
+            let isBox = $('.devvn_box_numberlogictis').length;
+            if (!isBox) return;
+            $('body').on('click','.devvn_box_numberlogictis .devvn_list_images ul li a', function() {
+                let href = $(this).attr('href'), tab = $('.devvn_' + href.slice(1));
+                $('.devvn_box_numberlogictis .devvn_list_images ul li').removeClass('active');
+                $(this).parent().addClass('active');
+                $('.devvn_box_numberlogictis .devvn_list_contents .text[class*="devvn_number_"]').removeClass('active');
+                $(tab, '.devvn_box_numberlogictis .devvn_list_contents ').addClass('active');
+                return false;
+            });
+        }
+
+        devvnNumberlogictis();
+
+        if ($(".devvn_equalize_box").length) {
+            function devvn_box_customer(elementClass, boxClass, boxIcon){
+                Array.prototype.max = function() {
+                    return Math.max.apply(null, this);
+                };
+
+                Array.prototype.min = function() {
+                    return Math.min.apply(null, this);
+                };
+
+                let elementBox = $(boxClass),
+                    elementSlider = $('.slider-wrapper', elementBox),
+                    elementSection = $(elementClass, elementBox),
+                    elementIcon = $(boxIcon, elementSection),
+                    hasSection = elementSection.length, listHeights = [];
+
+                if (!hasSection) return;
+                elementSlider.on( 'ready.flickity', function() {
+                    elementSection.each(function () {
+                        let elementHeight = $(boxIcon, this).outerHeight();
+                        listHeights.push(elementHeight);
+                    });
+                    if (listHeights){
+                        let max = Math.max.apply(null, listHeights);
+                       elementIcon.css('height', Math.ceil(max) + 'px');
+                    }
+                });
+    
+            }
+            devvn_box_customer('section','.devvn_box_realistic_feels','.box-text');
+        }
+
+        $('body').on('click', 'a[href="#c_form"]', function (){
+            let href = $(this).attr('href'), 
+                tab = $('.devvn_' + href.slice(1));
+            $(window).animate({scrollTop: tab.offset().top - 120}, "slow");
+            return false;
+        });
+
+    });
+})(jQuery);
